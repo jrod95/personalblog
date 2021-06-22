@@ -1,5 +1,5 @@
-<%= simple_form_for [ @article, @article.comments.build ] do |f| %>
-  <%= f.input :commenter%>
+<%= simple_form_for [ @article] do |f| %>
+  <%= f.input :title%>
   <%= f.input :body %>
   <%= f.input :status, as: :radio_buttons%>
   <%= f.button :submit %>
