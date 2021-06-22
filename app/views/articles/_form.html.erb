@@ -1,6 +1,6 @@
 <%= simple_form_for [ @article] do |f| %>
   <%= f.input :title%>
   <%= f.input :body %>
-  <%= f.input :status, as: :radio_buttons%>
+  <%= f.input :status, as: :radio_buttons, collection: ['archived', 'public', 'private'] %>
   <%= f.button :submit %>
 <% end %>
