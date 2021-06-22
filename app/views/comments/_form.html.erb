@@ -1,6 +1,6 @@
 <%= simple_form_for [ @article, @article.comments.build ] do |f| %>
   <%= f.input :commenter%>
   <%= f.input :body %>
-  <%= f.input :status, as: :radio_buttons%>
+  <%= f.input :status, as: :radio_buttons, collection: ['archived', 'public', 'private'], checked: 'public' %>
   <%= f.button :submit %>
 <% end %>
